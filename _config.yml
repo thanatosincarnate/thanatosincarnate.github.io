@@ -4,7 +4,7 @@ permalink:           pretty
 # Setup
 title:               Linux Desktop Musings
 tagline:             All things desktop, linux and musing...
-url:                 http://getpoole.com
+url:                 http://thanatosincarnate.github.io
 paginate:            1
 baseurl:             "http://thanatosincarnate.github.io"
 
@@ -24,7 +24,7 @@ author:
 # Custom vars
 version:             2.0.0
 github:
-  repo:              https://github.com/poole/poole
+  repo:              https://github.com/thanatosincarnate/thanatosincarnate.github.io
 
 # Gems
 gems:
