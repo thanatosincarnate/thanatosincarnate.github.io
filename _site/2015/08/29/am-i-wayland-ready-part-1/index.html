@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Am I Wayland Ready? - Part 1 &middot; Linux Desktop Musings
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Linux Desktop Musings" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="container content">
+      <header class="masthead">
+        <h3 class="masthead-title">
+          <a href="/" title="Home">Linux Desktop Musings</a>
+           
+             &nbsp;&nbsp;&nbsp;
+             <small><a href="/archive">Archive</a></small>
+           
+             &nbsp;&nbsp;&nbsp;
+             <small><a href="/atom.xml">Feed</a></small>
+           
+        </h3>
+      </header>
+
+      <main>
+        <article class="post">
+  <h1 class="post-title">Am I Wayland Ready? - Part 1</h1>
+  <time datetime="2015-08-29T00:00:00+02:00" class="post-date">29 Aug 2015</time>
+  <p><img src="https://i.imgur.com/wcK41Ch.png" alt="placeholder" title="LibreOffice Gnome Mockup" /></p>
+
+<p>I’m writing this from Fedora 22 Workstation within Wayland. Yes, a quite stable Wayland at that. I’m actually very positively surprised at how well it works. There are however many things to iron out until we can truly say it works out of the box. From my short venture into Wayland Land, I don’t think that the software already supporting it is giving us the most headache now. It’s rather the Xorg stuff running via XWayland that is buggy at the moment. I deliberately took a more stable distro with more matured Wayland/Xorg code to avoid the initial regressions and other grave bugs distros like Arch or other experimental Wayland live CDs might have.</p>
+
+<p>The laptop I used for testing:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Acer Aspire E15 E5-521-G</td>
+    </tr>
+    <tr>
+      <td>AMD A8-6410 APU 4 cores</td>
+    </tr>
+    <tr>
+      <td>4 GB, 768 MB reserved for integrated AMD Radeon R5 GPU</td>
+    </tr>
+    <tr>
+      <td>Dedicated AMD Radeon R5 M240 with 2 GB VRAM</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>I will not tackle this question from a developer’s standpoint. This is rather an outlook of what casual desktop users might expect when taking the plunge right now. Be aware though that few stable distros offer a decent Wayland experience at the moment. Most of those are probably limited to Gnome 3.14+ (although I think 3.16 should be the bare minimun), KDE 5.x and maybe E19. So, if you’re using Xfce or barebone window manager configs, your situation might be a bit more dire. The question in this article is: Would I be ready for an early adoption of Wayland? I will first present my initial experience and then give a table with vital programmes I need on a desktop with their current state on Wayland.</p>
+
+<p>Finally I could see all the benefits of Wayland first hand, or so I thought. :) My main gripe with X was always how hacky it was when it comes to proper vsync support, compositing or displaying stuff like a video within a browser window, while simultaneously trying to keep both the video and the window in sync when e.g. the user scrolls down to see some text (which happens often when watching a Youtube video and reading comments). All of GTK3 more or less runs under Wayland (although in some cases programmes might activate X specific things that are then probably translated to Xwayland). Those run quite well, but those are sadly the desktop level applications I least work with on a serious desktop. Gnome may be a slick desktop, but it lacks the serious applications we find in desktop agnostic software.</p>
+
+<p>Starting programmes that still run under X looked a bit weird – a window would start which quickly flashes black and then the window content appeared. It seemed a bit like the small glitches you see when running a Wine programme. The theme and font hinting look the same as the Wayland native applications though, so it never looks out of place. LibreOffice was the only exception, as it had a smaller UI font than what was set up on the system:</p>
+
+<p><img src="http://i.imgur.com/zfqKJkM.jpg" alt="placeholder" title="Libreoffice under Wayland" /></p>
+
+<p>I’ve worked a bit with Inkscape and Gimp and both worked great, although my tests only included opening large files and looking at the output of top when scrolling within them or selecting individual items from the document. One very annoying thing which was fixed in recent verions of whatever software is responsible for it is the fact that you cannot copy/paste text from a Wayland native application to an Xorg one and vice versa.</p>
+
+<p>Speaking of top, applications running under Xwayland do tax the CPU more than when they run in native X. On my low-end 4 core AMD APU with barely 2 GHz this was somewhere around 60% when the programme in question was not idling. Things, while certainly not crashing left and right, will feel wonky with the occasional performance hick up. The worst offender was Firefox. Granted, I tested Facebook and Youtube, which are performance hogs on Firefox even on X and aren’t as smooth as on e.g. a browser with decent multithreading and 3D acceleration like Chrome (cough, cough). Firefox is working on its GTK3 port and multithreading, so that just might be a question of time. This is the only way I could test any video performance. Videos in Youtube were a bit more laggy than in X and certainly took more CPU power. The vsync issues were the same as in X, which is expected. Firefox is not Wayland native, so it gets no perks from it either – vsync was not an issue in fullscreen, but outside of it, it was. I could not test any normal videos that run native in Wayland, since Totem would just segfault on me all the time.</p>
+
+<p>What I could do quickly was to install Epiphany (which I think runs Wayland native as a GTK3 programme) and try out Youtube. The site would either load and display correctly or it would be blank:</p>
+
+<p><img src="http://i.imgur.com/MvsY1Cw.jpg" alt="placeholder" title="Epiphany fails to show Youtube videos" /></p>
+
+<p>In either case, I could still click links (even when the site appeared blank, I could click blindly) and start videos I’d hear but wouldn’t see. At least with my ATI setup, it seems that the video layers aren’t properly used with this version of Wayland.</p>
+
+<p>Regarding video games, I ran a quick test with Guacamelee, which ran just as fine and snappy as in X. This isn’t a demanding game however. Querying glxinfo, I could even see that the DRI_PRIME flag correctly recognised my discrete ATI video card. This probably means that most Xorg features will just work in Xwayland. Running a Wine game was a different matter altogether. I fired up Playonlinux, which I used to install “Vampire, the Masquerade – Redemption”. I know, it’s an ancient game, but it runs 3D acceleration, so it’s good enough for a test. It crashed on me:</p>
+
+<p><img src="http://i.imgur.com/roryGyr.jpg" alt="placeholder" title="Wine game won't start under Wayland" /></p>
+
+<p>and Playonlinux’s debug window had this to say about it:</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">err</span><span class="o">:</span><span class="nx">x11settings</span><span class="o">:</span><span class="nx">X11DRV_ChangeDisplaySettingsEx</span> <span class="nx">No</span> <span class="nx">matching</span> <span class="nx">mode</span> <span class="nx">found</span> <span class="mi">1366</span><span class="nx">x768x32</span> <span class="err">@</span><span class="mi">0</span><span class="o">!</span> <span class="p">(</span><span class="nx">XRandR</span><span class="p">)</span>
+<span class="nx">fixme</span><span class="o">:</span><span class="nx">d3d</span><span class="o">:</span><span class="nx">resource_check_usage</span> <span class="nx">Unhandled</span> <span class="nx">usage</span> <span class="nx">flags</span> <span class="mh">0x8</span><span class="p">.</span>
+<span class="nx">wine</span><span class="o">:</span> <span class="nx">Unhandled</span> <span class="nx">stack</span> <span class="nx">overflow</span> <span class="nx">at</span> <span class="nx">address</span> <span class="mh">0x7bc64f94</span> <span class="p">(</span><span class="nx">thread</span> <span class="mi">0009</span><span class="p">),</span> <span class="nx">starting</span> <span class="kr">debugger</span><span class="p">...</span>
+<span class="nx">err</span><span class="o">:</span><span class="nx">seh</span><span class="o">:</span><span class="nx">setup_exception_record</span> <span class="nx">stack</span> <span class="nx">overflow</span> <span class="mi">880</span> <span class="nx">bytes</span> <span class="k">in</span> <span class="nx">thread</span> <span class="mi">0009</span> <span class="nx">eip</span> <span class="mi">7</span><span class="nx">bc592f1</span> <span class="nx">esp</span> <span class="mi">00240</span><span class="nx">fc0</span> <span class="nx">stack</span> <span class="mh">0x240000</span><span class="o">-</span><span class="mh">0x241000</span><span class="o">-</span><span class="mh">0x340000</span></code></pre></div>
+
+<p>Hopefully this was an informative insight into what to expect on a system with Wayland. Be warned though that the software stuck I’m currently running is already outdated when it comes to the currently very speedy Wayland development. To see what the stuff is really like, I recommend taking the time and running maybe a more recent setup on Arch with a more recent kernel, Wayland, Xorg and 3D drivers (also note that Wayland currently only runs with video drivers that can do kernel modesetting). I plan on doing another follow up with the current state of video drivers, 3D gaming and video playback.</p>
+
+<p>Here is a list of programmes I find essential and their current state in Wayland:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tools:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Archiving</td>
+      <td>file-roller</td>
+      <td>DONE</td>
+    </tr>
+    <tr>
+      <td>File Search</td>
+      <td>Gnome, KDE, Catfish</td>
+      <td>DONE</td>
+    </tr>
+    <tr>
+      <td>Editor</td>
+      <td>vim, gedit</td>
+      <td>DONE</td>
+    </tr>
+    <tr>
+      <td>Calculator</td>
+      <td>galculator</td>
+      <td>DONE</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Media:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Music</td>
+      <td>Gnome, KDE, Audacious </td>
+      <td>DONE</td>
+    </tr>
+    <tr>
+      <td>Video</td>
+      <td>Totem, mpv, VLC</td>
+      <td>WIP</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Kdenlive</td>
+      <td>DONE</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Productivity:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Office</td>
+      <td>Libreoffice</td>
+      <td>WIP</td>
+    </tr>
+    <tr>
+      <td>Annotation</td>
+      <td>Xournal</td>
+      <td>WIP</td>
+    </tr>
+    <tr>
+      <td>Graphics</td>
+      <td>Gnome</td>
+      <td>WIP</td>
+    </tr>
+    <tr>
+      <td>Vector</td>
+      <td>Inkscape</td>
+      <td>WIP</td>
+    </tr>
+    <tr>
+      <td>DTP</td>
+      <td>Scribus</td>
+      <td>DONE</td>
+    </tr>
+    <tr>
+      <td>Colour picker</td>
+      <td>gcolor3</td>
+      <td>DONE</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Games:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Native</td>
+      <td>XWayland </td>
+      <td>WIP</td>
+    </tr>
+    <tr>
+      <td>Windows</td>
+      <td>Wine</td>
+      <td>:(</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</article>
+
+
+<aside class="related">
+  <h3>Related posts</h3>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/2015/11/05/xubuntu-the-optimal-newbie-distro/">
+          Xubuntu - The Optimal Newbie Distro?
+          <small><time datetime="2015-11-05T00:00:00+01:00">05 Nov 2015</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2015/09/30/rant-mozilla-chrome/">
+          RANT - Mozilla Chrome
+          <small><time datetime="2015-09-30T00:00:00+02:00">30 Sep 2015</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2015/08/31/the-new-linux-packaging-paradigms-and-my-personal-fears/">
+          The New Linux Packaging Paradigms and My Personal Fears
+          <small><time datetime="2015-08-31T00:00:00+02:00">31 Aug 2015</time></small>
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+
+
+      </main>
+
+      <footer class="footer">
+        <small>
+          &copy; <time datetime="2016-02-25T14:42:18+01:00">2016</time>. All rights reserved.
+        </small>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Xubuntu - The Optimal Newbie Distro? &middot; Linux Desktop Musings
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Linux Desktop Musings" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="container content">
+      <header class="masthead">
+        <h3 class="masthead-title">
+          <a href="/" title="Home">Linux Desktop Musings</a>
+           
+             &nbsp;&nbsp;&nbsp;
+             <small><a href="/archive">Archive</a></small>
+           
+             &nbsp;&nbsp;&nbsp;
+             <small><a href="/atom.xml">Feed</a></small>
+           
+        </h3>
+      </header>
+
+      <main>
+        <article class="post">
+  <h1 class="post-title">Xubuntu - The Optimal Newbie Distro?</h1>
+  <time datetime="2015-11-05T00:00:00+01:00" class="post-date">05 Nov 2015</time>
+  <p>The question of the perfect Linux distro – countless generations of flamewars could not solve this issue, so please rejoice that I won’t tackle it either. As a long-term Debianite, I would preferably have everyone use this wonderful iteration of GNU/Linux, as it’s stable as a rock, not a commercial product and it has a long and prime security support cycle, making upgrades a comfortable experience. Yet I can’t suggest Debian to someone with very recent hardware. With a lot of very inexperienced users, I find myself recommending Xubuntu a lot. The reasons however have more to do with design decisions rather than ethical or technical ones.</p>
+
+<p>To explain why, I’d have to sum up some of the developments within desktop Linux that took place in the last five years. When the first relatively stable versions of Gnome 3 and Unity came out, there was a certain change within Linux desktops that I’ve found rather disturbing. With that I don’t mean the drastic UI changes in Gnome or the continuous bloat of some desktops. After all, you’re free to use other desktop environments. I rather mean that, due to design decisions mostly in Gnome, it became increasingly difficult to have applications that use different GUI toolkits without the experience being jarring.</p>
+
+<p>This is why I refrain from suggesting newbies to use a distro which focuses on Gnome 3. While the integrated experience is great, it’s also true that the Gnome devs don’t really care how e.g. LibreOffice, Skype or Scribus look on their desktop. On the other hand, the productivity and features of those applications are not necessarily provided by native Gnome applications. To name a specific example, it is odd to use LibreOffice or Inkscape on Gnome Shell if you only have a 1366x768 display. The controls are just too large and take away a lot of screen real estate which at a low resolution is just badly needed for productivity applications. The workaround that a Gnome dev would suggest is probably something like: “Wait until these applications move to GTK 3 and get a 1080p or even 4k display.” Now, I can’t say this to a user who is perfectly happy with their old but working machine.</p>
+
+<p>What I do instead is find a distro that goes a middle way wherein there is an effort to make both GTK2 and 3 applications look integrated. I’ve found all of this in Xubuntu. It offers a classic desktop experience, which also increases the chance of being accepted by novice users who are not ready to learn a new paradigm like Gnome Shell, while sporting an uncluttered default theme called Greybird. It is also a very lightweight desktop and, while it has grown in features and capability, it only offers a reduced selection of desktop tools compared to other desktops. Light as it is, it also saves resources, making it ideal for deployment on hardware going 8 years back. Unlike Debian, there is the ability to quickly update the kernel, Xorg or mesa stack (official backports within the LTS releases or PPAs) without completely upgrading to a very new version.</p>
+
+<p>And to just demonstrate how integrated the design is, take a look at this screenshot sporting a QT4, GTK2 and two GTK3 applications all pretty much having the same look:</p>
+
+<p><img src="http://i.imgur.com/3BPaUae.jpg" alt="placeholder" title="Several toolkits, one look!" /></p>
+
+<p>And to just demonstrate how integrated the design is, take a look at this screenshot (cf. fig. 1) sporting a QT4, GTK2 and two GTK3 applications all pretty much having the same look. Even the notorious client-side decorated applications don’t look out of place here. Rather than patching those and giving them a Frankenstein look and feel, the designers decided to just accept the client-side approach and make the controls look and behave as closely to other Xubuntu applications (which for a great part will be GTK2 ones) as possible. With 15.10, the team has also introduced an Elementary themed LibreOffice icon set (fig. 2), so the experience is the same all across the board. You could say the design is heavily lifted from MacOS X, but I guess it is easy enough to change if you don’t like it:</p>
+
+<p><img src="http://i.imgur.com/MNr611K.jpg" alt="placeholder" title="LibreOffice with Elementary icons" /></p>
+
+<p>Its unobtrusive design and application choice (they’ve finally ditched Abiword for LibreOffice) make it a great choice for people who prefer a stable, slowly changing desktop that just stays out of your way. Xubuntu 15.10 already feels very stable, so I’m really looking forward to the 16.04 LTS.</p>
+
+</article>
+
+
+<aside class="related">
+  <h3>Related posts</h3>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/2015/09/30/rant-mozilla-chrome/">
+          RANT - Mozilla Chrome
+          <small><time datetime="2015-09-30T00:00:00+02:00">30 Sep 2015</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2015/08/31/the-new-linux-packaging-paradigms-and-my-personal-fears/">
+          The New Linux Packaging Paradigms and My Personal Fears
+          <small><time datetime="2015-08-31T00:00:00+02:00">31 Aug 2015</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2015/08/29/am-i-wayland-ready-part-1/">
+          Am I Wayland Ready? - Part 1
+          <small><time datetime="2015-08-29T00:00:00+02:00">29 Aug 2015</time></small>
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+
+
+      </main>
+
+      <footer class="footer">
+        <small>
+          &copy; <time datetime="2016-02-25T14:42:18+01:00">2016</time>. All rights reserved.
+        </small>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>

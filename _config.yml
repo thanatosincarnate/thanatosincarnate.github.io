@@ -1,0 +1,36 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               Linux Desktop Musings
+tagline:             All things desktop, linux and musing...
+url:                 http://getpoole.com
+paginate:            1
+baseurl:             "http://thanatosincarnate.github.io/poole/"
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Thanatos Incarnate
+  url:               https://pod.geraspora.de/u/thanatosincarnate
+  email:             thanatosincarnate@openmailbox.org
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/poole/poole
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+pages_list:       
+  Archive: '/archive'
+  Feed: '/atom.xml'

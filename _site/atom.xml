@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Linux Desktop Musings</title>
+ <link href="http://getpoole.com/atom.xml" rel="self"/>
+ <link href="http://getpoole.com/"/>
+ <updated>2016-02-25T14:42:18+01:00</updated>
+ <id>http://getpoole.com</id>
+ <author>
+   <name>Thanatos Incarnate</name>
+   <email>thanatosincarnate@openmailbox.org</email>
+ </author>
+
+ 
+ <entry>
+   <title>Xubuntu - The Optimal Newbie Distro?</title>
+   <link href="http://getpoole.com/2015/11/05/xubuntu-the-optimal-newbie-distro/"/>
+   <updated>2015-11-05T00:00:00+01:00</updated>
+   <id>http://getpoole.com/2015/11/05/xubuntu-the-optimal-newbie-distro</id>
+   <content type="html">&lt;p&gt;The question of the perfect Linux distro – countless generations of flamewars could not solve this issue, so please rejoice that I won’t tackle it either. As a long-term Debianite, I would preferably have everyone use this wonderful iteration of GNU/Linux, as it’s stable as a rock, not a commercial product and it has a long and prime security support cycle, making upgrades a comfortable experience. Yet I can’t suggest Debian to someone with very recent hardware. With a lot of very inexperienced users, I find myself recommending Xubuntu a lot. The reasons however have more to do with design decisions rather than ethical or technical ones.&lt;/p&gt;
+
+&lt;p&gt;To explain why, I’d have to sum up some of the developments within desktop Linux that took place in the last five years. When the first relatively stable versions of Gnome 3 and Unity came out, there was a certain change within Linux desktops that I’ve found rather disturbing. With that I don’t mean the drastic UI changes in Gnome or the continuous bloat of some desktops. After all, you’re free to use other desktop environments. I rather mean that, due to design decisions mostly in Gnome, it became increasingly difficult to have applications that use different GUI toolkits without the experience being jarring.&lt;/p&gt;
+
+&lt;p&gt;This is why I refrain from suggesting newbies to use a distro which focuses on Gnome 3. While the integrated experience is great, it’s also true that the Gnome devs don’t really care how e.g. LibreOffice, Skype or Scribus look on their desktop. On the other hand, the productivity and features of those applications are not necessarily provided by native Gnome applications. To name a specific example, it is odd to use LibreOffice or Inkscape on Gnome Shell if you only have a 1366x768 display. The controls are just too large and take away a lot of screen real estate which at a low resolution is just badly needed for productivity applications. The workaround that a Gnome dev would suggest is probably something like: “Wait until these applications move to GTK 3 and get a 1080p or even 4k display.” Now, I can’t say this to a user who is perfectly happy with their old but working machine.&lt;/p&gt;
+
+&lt;p&gt;What I do instead is find a distro that goes a middle way wherein there is an effort to make both GTK2 and 3 applications look integrated. I’ve found all of this in Xubuntu. It offers a classic desktop experience, which also increases the chance of being accepted by novice users who are not ready to learn a new paradigm like Gnome Shell, while sporting an uncluttered default theme called Greybird. It is also a very lightweight desktop and, while it has grown in features and capability, it only offers a reduced selection of desktop tools compared to other desktops. Light as it is, it also saves resources, making it ideal for deployment on hardware going 8 years back. Unlike Debian, there is the ability to quickly update the kernel, Xorg or mesa stack (official backports within the LTS releases or PPAs) without completely upgrading to a very new version.&lt;/p&gt;
+
+&lt;p&gt;And to just demonstrate how integrated the design is, take a look at this screenshot sporting a QT4, GTK2 and two GTK3 applications all pretty much having the same look:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/3BPaUae.jpg&quot; alt=&quot;placeholder&quot; title=&quot;Several toolkits, one look!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And to just demonstrate how integrated the design is, take a look at this screenshot (cf. fig. 1) sporting a QT4, GTK2 and two GTK3 applications all pretty much having the same look. Even the notorious client-side decorated applications don’t look out of place here. Rather than patching those and giving them a Frankenstein look and feel, the designers decided to just accept the client-side approach and make the controls look and behave as closely to other Xubuntu applications (which for a great part will be GTK2 ones) as possible. With 15.10, the team has also introduced an Elementary themed LibreOffice icon set (fig. 2), so the experience is the same all across the board. You could say the design is heavily lifted from MacOS X, but I guess it is easy enough to change if you don’t like it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/MNr611K.jpg&quot; alt=&quot;placeholder&quot; title=&quot;LibreOffice with Elementary icons&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Its unobtrusive design and application choice (they’ve finally ditched Abiword for LibreOffice) make it a great choice for people who prefer a stable, slowly changing desktop that just stays out of your way. Xubuntu 15.10 already feels very stable, so I’m really looking forward to the 16.04 LTS.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>RANT - Mozilla Chrome</title>
+   <link href="http://getpoole.com/2015/09/30/rant-mozilla-chrome/"/>
+   <updated>2015-09-30T00:00:00+02:00</updated>
+   <id>http://getpoole.com/2015/09/30/rant-mozilla-chrome</id>
+   <content type="html">&lt;p&gt;Dear Mozilla,&lt;/p&gt;
+
+&lt;p&gt;I thank you very much for your hard work on Firefox, but…&lt;/p&gt;
+
+&lt;p&gt;I know you don’t want to hear it, Mozilla, but these constant UI changes are a bit annoying. I wouldn’t be angry about them if changing them wouldn’t then require an add-on which syphons my memory and makes my CPU go mental (sucks to be me and not like the Australis Tabs – I guess 1366x768 is the new 640x480 and I should feel ashamed of not having true HD, huh?). Luckily changing your recent “improvement” back is trivial, but no matter how much you want me to use a grid preview of my last viewed sites, I won’t do that. I don’t want to open up a browser window at work, only for my superior to see my top 10 sites. I want a blank tab and I don’t think it was that hard to just review my old settings in 40 and apply them to whatever the new paradigm for switching your gorgeous New Tab Page (R) is in 41. Or was it really that hard to have the new code just follow the old switch instead of introducing a new one? Luckily, you’ve at least kept the option to change them. At least a bit that isn’t “australicised”. Now go back to working on proper multithreading and making making HTML5 videos suck less even on recent machines…&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>The New Linux Packaging Paradigms and My Personal Fears</title>
+   <link href="http://getpoole.com/2015/08/31/the-new-linux-packaging-paradigms-and-my-personal-fears/"/>
+   <updated>2015-08-31T00:00:00+02:00</updated>
+   <id>http://getpoole.com/2015/08/31/the-new-linux-packaging-paradigms-and-my-personal-fears</id>
+   <content type="html">&lt;p&gt;These are exciting times to be a Linux user. With systemd, the new desktop environments and finally with container-supported packaging we will witness a new paradigm of how the entire ecosystem works, for better or for worse. I have to admit that this idea is quite exciting: finally, we’ll be able to iron out the shortcomings of Linux packaging. No longer will it be a burden to get software “foo” which happens to bump half of your system’s libraries to newer versions and ends up breaking your system. We’ll be able to run a stable base, but have isolated newer packages that pull in new versions of dependencies as needed. What worries me in this entire process is that this might spell the end for distributions as we know them today.&lt;/p&gt;
+
+&lt;p&gt;One might ask the question why I think distros are important and what would happen if they just disappeared over night. To me, distributions have always meant that there were organisations which monitored how software functions beyond the upstream within specific areas of requirements. So, for a developer the piece of software might run just fine and it might do that for the handful of volunteers that do test upstream software. However, what ends up being used in distributions gets at least another set of eyes sifting through the bugs that might occur when software “foo” is used within environment “bar”, etc.&lt;/p&gt;
+
+&lt;p&gt;Let me cut out the cryptic theoretical musing and give you a real-life example: the KDE 4 series of releases. When KDE 4 came out, the developers issued a half-baked version as a 4.0 on purpose in order to encourage more testing by other community members. Some distros, like Opensuse, adopted KDE 4 early on – Kubuntu AFAIK did something similar soon thereafter. Upstream developers were hoping for more feedback from real life distribution applications of their software. They got it, yet I still don’t think this was a better move than just releasing the software as a development preview and have the distributions fix things within their own development branches. Why? Well, if there is a new upstream release, I think there are only so many users willing to take the plunge and be part of the experiment. Mostly, these are tech savvy computer enthusiasts, often with a spare machine or VM to test such things. The thing is: calling something 4.0 won’t make the proverbial grandmas, which use a browser and maybe a spreadsheet tool, test a new desktop environment. While you might have encouraged a few more people to try out 4.0, you could have done the same with just a PPA.&lt;/p&gt;
+
+&lt;p&gt;This reminds us that upstream Linux software usually comes with a very tolerant definition of the word “stable”. And while this may be sufficient for bleeding edge distros like Arch or Fedora, the average Mint or Ubuntu user just won’t bother with a distro that will break at least a bit. Traditionally using Debian, I’ve become the sort of user who is annoyed by the tiniest bit of breakage. For me Ubuntu LTS or a Debian Stable is the perfect distro, were it not for the sometimes outdated drivers.&lt;/p&gt;
+
+&lt;p&gt;To stay within the KDE example, I have come across many problems during the early KDE 4 releases: Email cache breaking between releases, completely unusable PIM stack, unusable Caligra office,… However, when I tested Debian Stable with 4.3 (Squeeze I think), things just worked great. Granted, upstream KDE was already at 4.6 when Squeeze was released, but at least I had a stable release within what I define as stable. This is why I want distros to stay, or at least those fine enthusiasts which take a snapshot of upstream and make a stable OS for us. I’m completely aware that having the quick ability to use the latest software and even various versions of it will lead to at least a bit more instability and this is probably the price we pay for it, but I’d hate for Linux to become just a huge collection of chaotic software packages with little quality control.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Am I Wayland Ready? - Part 1</title>
+   <link href="http://getpoole.com/2015/08/29/am-i-wayland-ready-part-1/"/>
+   <updated>2015-08-29T00:00:00+02:00</updated>
+   <id>http://getpoole.com/2015/08/29/am-i-wayland-ready-part-1</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/wcK41Ch.png&quot; alt=&quot;placeholder&quot; title=&quot;LibreOffice Gnome Mockup&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m writing this from Fedora 22 Workstation within Wayland. Yes, a quite stable Wayland at that. I’m actually very positively surprised at how well it works. There are however many things to iron out until we can truly say it works out of the box. From my short venture into Wayland Land, I don’t think that the software already supporting it is giving us the most headache now. It’s rather the Xorg stuff running via XWayland that is buggy at the moment. I deliberately took a more stable distro with more matured Wayland/Xorg code to avoid the initial regressions and other grave bugs distros like Arch or other experimental Wayland live CDs might have.&lt;/p&gt;
+
+&lt;p&gt;The laptop I used for testing:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Acer Aspire E15 E5-521-G&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;AMD A8-6410 APU 4 cores&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4 GB, 768 MB reserved for integrated AMD Radeon R5 GPU&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dedicated AMD Radeon R5 M240 with 2 GB VRAM&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;I will not tackle this question from a developer’s standpoint. This is rather an outlook of what casual desktop users might expect when taking the plunge right now. Be aware though that few stable distros offer a decent Wayland experience at the moment. Most of those are probably limited to Gnome 3.14+ (although I think 3.16 should be the bare minimun), KDE 5.x and maybe E19. So, if you’re using Xfce or barebone window manager configs, your situation might be a bit more dire. The question in this article is: Would I be ready for an early adoption of Wayland? I will first present my initial experience and then give a table with vital programmes I need on a desktop with their current state on Wayland.&lt;/p&gt;
+
+&lt;p&gt;Finally I could see all the benefits of Wayland first hand, or so I thought. :) My main gripe with X was always how hacky it was when it comes to proper vsync support, compositing or displaying stuff like a video within a browser window, while simultaneously trying to keep both the video and the window in sync when e.g. the user scrolls down to see some text (which happens often when watching a Youtube video and reading comments). All of GTK3 more or less runs under Wayland (although in some cases programmes might activate X specific things that are then probably translated to Xwayland). Those run quite well, but those are sadly the desktop level applications I least work with on a serious desktop. Gnome may be a slick desktop, but it lacks the serious applications we find in desktop agnostic software.&lt;/p&gt;
+
+&lt;p&gt;Starting programmes that still run under X looked a bit weird – a window would start which quickly flashes black and then the window content appeared. It seemed a bit like the small glitches you see when running a Wine programme. The theme and font hinting look the same as the Wayland native applications though, so it never looks out of place. LibreOffice was the only exception, as it had a smaller UI font than what was set up on the system:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/zfqKJkM.jpg&quot; alt=&quot;placeholder&quot; title=&quot;Libreoffice under Wayland&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve worked a bit with Inkscape and Gimp and both worked great, although my tests only included opening large files and looking at the output of top when scrolling within them or selecting individual items from the document. One very annoying thing which was fixed in recent verions of whatever software is responsible for it is the fact that you cannot copy/paste text from a Wayland native application to an Xorg one and vice versa.&lt;/p&gt;
+
+&lt;p&gt;Speaking of top, applications running under Xwayland do tax the CPU more than when they run in native X. On my low-end 4 core AMD APU with barely 2 GHz this was somewhere around 60% when the programme in question was not idling. Things, while certainly not crashing left and right, will feel wonky with the occasional performance hick up. The worst offender was Firefox. Granted, I tested Facebook and Youtube, which are performance hogs on Firefox even on X and aren’t as smooth as on e.g. a browser with decent multithreading and 3D acceleration like Chrome (cough, cough). Firefox is working on its GTK3 port and multithreading, so that just might be a question of time. This is the only way I could test any video performance. Videos in Youtube were a bit more laggy than in X and certainly took more CPU power. The vsync issues were the same as in X, which is expected. Firefox is not Wayland native, so it gets no perks from it either – vsync was not an issue in fullscreen, but outside of it, it was. I could not test any normal videos that run native in Wayland, since Totem would just segfault on me all the time.&lt;/p&gt;
+
+&lt;p&gt;What I could do quickly was to install Epiphany (which I think runs Wayland native as a GTK3 programme) and try out Youtube. The site would either load and display correctly or it would be blank:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/MvsY1Cw.jpg&quot; alt=&quot;placeholder&quot; title=&quot;Epiphany fails to show Youtube videos&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In either case, I could still click links (even when the site appeared blank, I could click blindly) and start videos I’d hear but wouldn’t see. At least with my ATI setup, it seems that the video layers aren’t properly used with this version of Wayland.&lt;/p&gt;
+
+&lt;p&gt;Regarding video games, I ran a quick test with Guacamelee, which ran just as fine and snappy as in X. This isn’t a demanding game however. Querying glxinfo, I could even see that the DRI_PRIME flag correctly recognised my discrete ATI video card. This probably means that most Xorg features will just work in Xwayland. Running a Wine game was a different matter altogether. I fired up Playonlinux, which I used to install “Vampire, the Masquerade – Redemption”. I know, it’s an ancient game, but it runs 3D acceleration, so it’s good enough for a test. It crashed on me:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/roryGyr.jpg&quot; alt=&quot;placeholder&quot; title=&quot;Wine game won&#39;t start under Wayland&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and Playonlinux’s debug window had this to say about it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x11settings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;X11DRV_ChangeDisplaySettingsEx&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;No&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;matching&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mode&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1366&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x768x32&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;XRandR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;fixme&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d3d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resource_check_usage&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Unhandled&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;usage&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;flags&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;wine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Unhandled&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stack&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;overflow&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x7bc64f94&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;thread&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0009&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;starting&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;debugger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;seh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setup_exception_record&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stack&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;overflow&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;880&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bytes&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;thread&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0009&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;eip&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bc592f1&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;esp&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;00240&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fc0&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stack&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x240000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x241000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x340000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hopefully this was an informative insight into what to expect on a system with Wayland. Be warned though that the software stuck I’m currently running is already outdated when it comes to the currently very speedy Wayland development. To see what the stuff is really like, I recommend taking the time and running maybe a more recent setup on Arch with a more recent kernel, Wayland, Xorg and 3D drivers (also note that Wayland currently only runs with video drivers that can do kernel modesetting). I plan on doing another follow up with the current state of video drivers, 3D gaming and video playback.&lt;/p&gt;
+
+&lt;p&gt;Here is a list of programmes I find essential and their current state in Wayland:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Tools:&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Archiving&lt;/td&gt;
+      &lt;td&gt;file-roller&lt;/td&gt;
+      &lt;td&gt;DONE&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;File Search&lt;/td&gt;
+      &lt;td&gt;Gnome, KDE, Catfish&lt;/td&gt;
+      &lt;td&gt;DONE&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Editor&lt;/td&gt;
+      &lt;td&gt;vim, gedit&lt;/td&gt;
+      &lt;td&gt;DONE&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Calculator&lt;/td&gt;
+      &lt;td&gt;galculator&lt;/td&gt;
+      &lt;td&gt;DONE&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Media:&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Music&lt;/td&gt;
+      &lt;td&gt;Gnome, KDE, Audacious &lt;/td&gt;
+      &lt;td&gt;DONE&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Video&lt;/td&gt;
+      &lt;td&gt;Totem, mpv, VLC&lt;/td&gt;
+      &lt;td&gt;WIP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Kdenlive&lt;/td&gt;
+      &lt;td&gt;DONE&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Productivity:&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Office&lt;/td&gt;
+      &lt;td&gt;Libreoffice&lt;/td&gt;
+      &lt;td&gt;WIP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Annotation&lt;/td&gt;
+      &lt;td&gt;Xournal&lt;/td&gt;
+      &lt;td&gt;WIP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Graphics&lt;/td&gt;
+      &lt;td&gt;Gnome&lt;/td&gt;
+      &lt;td&gt;WIP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Vector&lt;/td&gt;
+      &lt;td&gt;Inkscape&lt;/td&gt;
+      &lt;td&gt;WIP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;DTP&lt;/td&gt;
+      &lt;td&gt;Scribus&lt;/td&gt;
+      &lt;td&gt;DONE&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Colour picker&lt;/td&gt;
+      &lt;td&gt;gcolor3&lt;/td&gt;
+      &lt;td&gt;DONE&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Games:&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Native&lt;/td&gt;
+      &lt;td&gt;XWayland &lt;/td&gt;
+      &lt;td&gt;WIP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt;Wine&lt;/td&gt;
+      &lt;td&gt;:(&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>LibreOffice Gnome Mockup</title>
+   <link href="http://getpoole.com/2015/08/28/libreoffice-gnome-mockup/"/>
+   <updated>2015-08-28T00:00:00+02:00</updated>
+   <id>http://getpoole.com/2015/08/28/libreoffice-gnome-mockup</id>
+   <content type="html">&lt;p&gt;Recently, I have become a fan of the Gnome workflow. I haven’t been a fan from the start and there are still a lot of things I would like to see changed, but to be honest, after working with such a UI for an extended time, it is very hard to go back to feature packed applications which expose a bit too much to the user. Even though I am slowly transitioning to LaTeX, there are still minor documents which are much quicker done in LibreOffice. Additionally, my job also requires me to open and edit simple ODF or DOC files, so LibreOffice is a must. I’ve often mused about how great it would be to apply the simplified GTK3 layout to LibreOffice.&lt;/p&gt;
+
+&lt;p&gt;Now, before you start, I’m in no way advocating the full application of the Gnome HIG onto LibreOffice. That would hinder a lot of people in accepting it as an office suite, especially in more conservative workflows like traditional companies or government desktop setups. Yet it would be great if this formidable office suite offered a bit more freedom to adjust the toolbars and menubar more to the individual workflow. Here is a screenshot example of what I mean:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/wcK41Ch.png&quot; alt=&quot;placeholder&quot; title=&quot;LibreOffice Gnome Mockup&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In my proposition, the GTK3 plug-in could have an option to use client-side decorations. It would be a simpler experience easier on the eyes. To not waste any additional vertical space and use the horizontal ones we’ve got plenty of since the introduction of wide screens, I would like most of the user interaction to happen within the side bar. Contrary to the default setting, I would like the side bar to be on the left. I had this idea while working within Gedit, which I rather like with its left side bar.&lt;/p&gt;
+
+&lt;p&gt;However, I’m not particularly happy with the static nature of the side bar in LibreOffice. I mean, it’s perfectly fine for me, but I wonder if we couldn’t make this more dynamic (maybe call it the “Smart Bar”) and have something of our own ribbon style menu. Now, don’t stone me yet for using the vile r word! I’m disgusted by the ribbon as much as the next guy, but I’ve been wondering why people like it so much. I mean, it’s ugly and on lower resoultions at least it takes away a quarter of the vertical screen real estate. I’ve found however that the dynamic nature of the ribbon exposes functionality to the user in quite an ingenious way: You click on a piece of text, you’ll get the character menu; you click on a footnote, you’ll get the footnote menu, etc. Wouldn’t it be great if our side bar could do that, too?&lt;/p&gt;
+
+&lt;p&gt;That would at least hush all the people who are frightened by the endless searches through the menus and cluttered toolbars. In additon, it wouldn’t waste vertical screen real estate like the ribbon does, but make use of the wast horizontal space that most UI designers ignore. I want to stress though that my propositions are a Gnome specific mock up and that I would hate to see any UI change like this be the only possibility. When Gnome changed, we’ve seen a lot of people complain about the lack of customisation, while others welcomed the change. I’ve grown to like the Gnome way, but I don’t think LibreOffice should ever be like Gnome. It should be more like KDE – offer the possibility of various UI customisations. So, if you like your 90s style menu bars and cluttered toolbars, so be it. If you’d like to have client-side decorations and a clean interface, that’s OK too. Similarly, if you’d like a static sidebar or a “smart” one, that should be your prerogative as well.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
