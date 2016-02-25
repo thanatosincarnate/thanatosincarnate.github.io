@@ -13,7 +13,7 @@ On recent posts, I have lamented how new GUI development is rather geared toward
 
 I'll be working with traditional desktop metaphors, as UIs such as Gnome, Unity etc. require a more hands on approach with theming. My machine has an 1366x768 resolution and runs Xfce, so for a slimmer look, I trim the following setings:
 
-</table>
+<table>
   <tbody>
     <tr>
       <td>Panel height ("Row size" on Xfce)</td>
