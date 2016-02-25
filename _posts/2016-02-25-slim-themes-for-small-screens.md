@@ -32,5 +32,14 @@ I'll be working with traditional desktop metaphors, as UIs such as Gnome, Unity 
 
 ## Themes
 
-It's easy to find some older GTK2 themes that have been slimmed down. The most popular used to be Clearlooks Compact. If you look over the creator's site, I 
+It's easy to find some older GTK2 themes that have been slimmed down. The most popular used to be <a href="http://martin.ankerl.com/2007/11/04/clearlooks-compact-gnome-theme/">Clearlooks Compact</a>. If you look over the creator's site, there is a screenshot which you can mouse over and see the difference. The compact version of the theme takes us much less of your screen. However, while this theme gives good visibility and sports some pleasent colours, chances are the old-fashioned look won't make you really happy. You can though open up the gtkrc file of Clearlooks Compact and compare it to your favourite GTK2 theme. Adjusting the different size and xthickness or ythickness values can save a lot of visual padding that very often is not needed for clarity and only takes away needed space.
+
+The first punished offenders are seen at the top of the file - the icon sizes:
+
+{% highlight js linenos %}
+gtk-icon-sizes = "panel-menu=16,16 : gtk-menu=16,16 : gtk-button=16,16 : gtk-small-toolbar=16,16 : gtk-large-toolbar=16,16 : gtk-dialog=32,32 : gtk-dnd=32,32"
+{% endhighlight %}
+
+
+
 
