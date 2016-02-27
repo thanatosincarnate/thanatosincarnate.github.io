@@ -37,7 +37,7 @@ It's easy to find some older GTK2 themes that have been slimmed down. The most p
 
 Another set of offenders are at the top of the file - the icon sizes:
 
-{% highlight js linenos %}
+{% highlight js %}
 gtk-icon-sizes = "panel-menu=16,16 : gtk-menu=16,16 : gtk-button=16,16 : gtk-small-toolbar=16,16 : gtk-large-toolbar=16,16 : gtk-dialog=32,32 : gtk-dnd=32,32"
 {% endhighlight %}
 
