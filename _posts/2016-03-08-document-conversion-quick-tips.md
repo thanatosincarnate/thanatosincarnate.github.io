@@ -6,8 +6,8 @@ title: Some Quick Ideas for Document Conversion
 I just love using LaTeX. It takes a while to learn, but once used to it, it's just so much quicker to fire up a console and write something down into a clean text-only interface. That being said, 90% of the documents I get from others at my job are MS Word files, either .doc or .docx. Some colleagues even prefer I send them those files instead of plain text files or PDFs, so I just do them the favour. However, opening up LibreOffice just to write down one page of barely formatted text just seems so nonsensical. You can see how the difference in preference between others and me can be very annoying, so here are some automated ways of dealing with this.
 
 Software required for these scripts:
-* LibreOffice
-* pandoc
+-LibreOffice
+-<a href="http://pandoc.org/">pandoc</a>
 
 ## 1. Using my PDF viewer to quickly look at office files
 
