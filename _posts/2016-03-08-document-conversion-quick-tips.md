@@ -75,7 +75,7 @@ This will
 I call the script **docless**. On the command line, I can view a file, e.g. **foo.doc** like this:
 
 {% highlight js %}
-docless foodoc
+docless foo.doc
 {% endhighlight %}
 
 
