@@ -9,6 +9,7 @@ Software required for these scripts:
 -LibreOffice
 -<a href="http://pandoc.org/">pandoc</a>
 
+
 ## 1. Using my PDF viewer to quickly look at office files
 
 Starting LibreOffice just to view a single file annoys me, as it takes a bit of time and also distracts while reading, as it gives me too much interface I don't need at the time. So I've written a script that will just convert the file on the fly into a PDF and start Atril, my PDF viewer, to show it. This uses LibreOFfice in headless mode to convert the file, which for some reason won't work when you have any instance of normal LibreOffice open. Coincidentally, it even won't give you an error message, so keep that in mind when testing: close all instances of LibreOFfice first!
@@ -44,6 +45,7 @@ pdf:"writer_pdf_Export"
 
 to convert documents to PDF? I just looked it up on <a href="https://cgit.freedesktop.org/libreoffice/core/tree/filter/source/config/fragments/filters"> this page</a> (also bookmark it, we'll need it later). Just click on the desired format and note the value under **<node oor:name** that is in "".
 
+
 ## 2. Quickly read that MS Word file on your command line
 
 I have to cringe every time I get a simple text document not as plain text, but as an MS Word file. Ugh! But thanks to open source software, I can just write a viewer for the command line.
@@ -70,7 +72,12 @@ This will
 3. view it with less (or you can provide an editor like nano, vim,...)
 4. Once you exit less, it will just delete the text file.
 
-I call the script **docless**.
+I call the script **docless**. On the command line, I can view a file, e.g. **foo.doc** like this:
+
+{% highlight js %}
+docless foodoc
+{% endhighlight %}
+
 
 ## 3. Convert a LaTeX file to MS Word
 
