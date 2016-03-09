@@ -83,8 +83,9 @@ docless foo.doc
 
 I just hate it when I use LaTeX to write something and the person proofreading it won't accept a PDF since they are used to inserting comments into a .doc file. Well, this method sadly won't make .doc files with perfect layout and all that, but it will at least give the person the entire content without you having to manually copy/paste the whole thing into LibreOffice or something. This script requires **pandoc**.
 
-#!/bin/bash
 {% highlight js %}
+#!/bin/bash
+
 printf "\n\n Converting LaTeX document to M$ Word... \n\n"
 
 if [ $# -eq 0 ]
