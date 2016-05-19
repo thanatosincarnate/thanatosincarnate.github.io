@@ -12,3 +12,9 @@ This is my second attempt at a Gnome 3 themed mockup for LibreOffice. Read about
 [Full link](http://i.imgur.com/SxhdzHC.png "LibreOffice Gnome Mockup - Writer")
 
 My work is public domain in case anyone wants to hack at it. The extra icons used are from the Adwaita icon theme in Gnome 3.18 (Fedora Workstation 23).
+
+Here are the 3 Inkscape SVG files (though most of it are raster screenshots graphics:
+
+[1](http://thanatosincarnate.github.io/public/libreoffice-gnome-mockup-startpage.svg "Mockup SVG 1")
+[2](http://thanatosincarnate.github.io/public/libreoffice-gnome-mockup.svg "Mockup SVG 2")
+[3](http://thanatosincarnate.github.io/public/libreoffice-gnome-mockup-menu.svg "Mockup SVG 3")
